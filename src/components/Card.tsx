@@ -1,8 +1,8 @@
 /* eslint-disable react-native/no-inline-styles */
-import {View, Text, StyleProp, ViewStyle, TouchableOpacity} from 'react-native';
 import React, {ReactNode} from 'react';
-import {GlobalStyles} from '../styles/GlobalStyles';
+import {StyleProp, TouchableOpacity, View, ViewStyle} from 'react-native';
 import {colors} from '../constants/colors';
+import {GlobalStyles} from '../styles/GlobalStyles';
 
 interface Props {
   children: ReactNode;

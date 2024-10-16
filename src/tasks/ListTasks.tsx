@@ -1,14 +1,15 @@
 /* eslint-disable react-native/no-inline-styles */
-import React, {useEffect, useState} from 'react';
-import Container from '../components/Container';
-import TextComponent from '../components/TextComponent';
-import {FlatList, TouchableOpacity} from 'react-native';
-import TitleComponent from '../components/TitleComponent';
-import {TaskModel} from '../models/TaskModel';
-import {colors} from '../constants/colors';
-import Section from '../components/Section';
-import Input from '../components/Input';
 import {SearchNormal1} from 'iconsax-react-native';
+import React, {useEffect, useState} from 'react';
+import {FlatList, TouchableOpacity} from 'react-native';
+import {colors} from '../constants/colors';
+import {TaskModel} from '../models/TaskModel';
+
+import Container from '../components/Container';
+import Input from '../components/Input';
+import Section from '../components/Section';
+import TextComponent from '../components/TextComponent';
+import TitleComponent from '../components/TitleComponent';
 
 const ListTasks = ({navigation, route}: any) => {
   const {tasks}: {tasks: TaskModel[]} = route.params;

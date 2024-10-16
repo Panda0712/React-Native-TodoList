@@ -11,8 +11,12 @@ import {Alert, ScrollView, TouchableOpacity, View} from 'react-native';
 import {colors} from '../constants/colors';
 import {Attachment, SubTasks, TaskModel} from '../models/TaskModel';
 import {HandleDateTime} from '../utils/handleDateTime';
-
+import {fontFamilies} from '../constants/fontFamiles';
+import {calcFileSize} from '../utils/calclFileSize';
+import {HandleNotification} from '../utils/handleNotification';
 import {Slider} from '@miblanchard/react-native-slider';
+
+import auth from '@react-native-firebase/auth';
 import firestore from '@react-native-firebase/firestore';
 import React, {useEffect, useState} from 'react';
 import AvatarGroup from '../components/AvatarGroup';
@@ -24,11 +28,7 @@ import Space from '../components/Space';
 import TextComponent from '../components/TextComponent';
 import TitleComponent from '../components/TitleComponent';
 import UploadFileComponent from '../components/UploadFileComponent';
-import {fontFamilies} from '../constants/fontFamiles';
 import ModalAddSubTask from '../modals/ModalAddSubTask';
-import {calcFileSize} from '../utils/calclFileSize';
-import {HandleNotification} from '../utils/handleNotification';
-import auth from '@react-native-firebase/auth';
 
 const TaskDetail = ({navigation, route}: any) => {
   const {id, color}: {id: string; color?: string} = route.params;

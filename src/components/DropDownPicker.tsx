@@ -1,17 +1,18 @@
 /* eslint-disable react-native/no-inline-styles */
-import {View, Text, Modal, FlatList, TouchableOpacity} from 'react-native';
-import React, {useEffect, useState} from 'react';
-import {SelectModel} from '../models/SelectModel';
-import TitleComponent from './TitleComponent';
-import Row from './Row';
-import {GlobalStyles} from '../styles/GlobalStyles';
-import TextComponent from './TextComponent';
-import {colors} from '../constants/colors';
 import {ArrowDown2, SearchNormal1, TickCircle} from 'iconsax-react-native';
+import React, {useEffect, useState} from 'react';
+import {FlatList, Modal, TouchableOpacity, View} from 'react-native';
+import AntDesign from 'react-native-vector-icons/AntDesign';
+import {colors} from '../constants/colors';
+import {SelectModel} from '../models/SelectModel';
+import {GlobalStyles} from '../styles/GlobalStyles';\
+
 import Button from './Button';
 import Input from './Input';
-import AntDesign from 'react-native-vector-icons/AntDesign';
+import Row from './Row';
 import Space from './Space';
+import TextComponent from './TextComponent';
+import TitleComponent from './TitleComponent';
 
 interface Props {
   title?: string;

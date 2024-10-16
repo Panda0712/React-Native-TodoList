@@ -1,16 +1,18 @@
-import React, {useEffect, useState} from 'react';
+import auth from '@react-native-firebase/auth';
+import messaging from '@react-native-firebase/messaging';
+
+import {useLinkTo} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import HomeScreen from '../home/HomeScreen';
-import AddNewTask from '../tasks/AddNewTask';
+import React, {useEffect, useState} from 'react';
+
+import Notifications from '../Notifications';
 import SearchScreen from '../SearchScreen';
 import LoginScreen from '../auth/LoginScreen';
-import auth from '@react-native-firebase/auth';
 import SignUpScreen from '../auth/SignUpScreen';
-import TaskDetail from '../tasks/TaskDetail';
+import HomeScreen from '../home/HomeScreen';
+import AddNewTask from '../tasks/AddNewTask';
 import ListTasks from '../tasks/ListTasks';
-import Notifications from '../Notifications';
-import {useLinkTo} from '@react-navigation/native';
-import messaging from '@react-native-firebase/messaging';
+import TaskDetail from '../tasks/TaskDetail';
 
 const Router = () => {
   const [isLogin, setIsLogin] = useState(false);

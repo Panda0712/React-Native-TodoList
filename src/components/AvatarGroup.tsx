@@ -3,6 +3,7 @@ import React from 'react';
 import {Image, View} from 'react-native';
 import {colors} from '../constants/colors';
 import {fontFamilies} from '../constants/fontFamiles';
+
 import Row from './Row';
 import TextComponent from './TextComponent';
 

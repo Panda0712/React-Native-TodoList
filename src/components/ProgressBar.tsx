@@ -1,10 +1,11 @@
 /* eslint-disable react-native/no-inline-styles */
-import {View, Text} from 'react-native';
 import React from 'react';
+import {View} from 'react-native';
 import {colors} from '../constants/colors';
+import {fontFamilies} from '../constants/fontFamiles';
+
 import Row from './Row';
 import TextComponent from './TextComponent';
-import {fontFamilies} from '../constants/fontFamiles';
 
 interface Props {
   size?: 'small' | 'default' | 'large';

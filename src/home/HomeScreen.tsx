@@ -13,6 +13,15 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
+import {monthNames} from '../constants/appInfo';
+import {colors} from '../constants/colors';
+import {TaskModel} from '../models/TaskModel';
+import {GlobalStyles} from '../styles/GlobalStyles';
+import {HandleNotification} from '../utils/handleNotification';
+
+import auth from '@react-native-firebase/auth';
+import firestore from '@react-native-firebase/firestore';
+import AddTaskButton from '../components/AddTaskButton';
 import AvatarGroup from '../components/AvatarGroup';
 import Card from '../components/Card';
 import CardImage from '../components/CardImage';
@@ -25,14 +34,6 @@ import Space from '../components/Space';
 import Tag from '../components/Tag';
 import TextComponent from '../components/TextComponent';
 import TitleComponent from '../components/TitleComponent';
-import {colors} from '../constants/colors';
-import {GlobalStyles} from '../styles/GlobalStyles';
-import AddTaskButton from '../components/AddTaskButton';
-import auth from '@react-native-firebase/auth';
-import firestore from '@react-native-firebase/firestore';
-import {TaskModel} from '../models/TaskModel';
-import {monthNames} from '../constants/appInfo';
-import {HandleNotification} from '../utils/handleNotification';
 
 const date = new Date();
 

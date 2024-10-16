@@ -3,6 +3,7 @@ import React, {useEffect, useState} from 'react';
 import {Alert, ScrollView, View} from 'react-native';
 import {SelectModel} from '../models/SelectModel';
 import {Attachment, TaskModel} from '../models/TaskModel';
+import {HandleNotification} from '../utils/handleNotification';
 
 import auth from '@react-native-firebase/auth';
 import firestore from '@react-native-firebase/firestore';
@@ -17,7 +18,6 @@ import Space from '../components/Space';
 import TextComponent from '../components/TextComponent';
 import TitleComponent from '../components/TitleComponent';
 import UploadFileComponent from '../components/UploadFileComponent';
-import {HandleNotification} from '../utils/handleNotification';
 
 const initValue: TaskModel = {
   title: '',

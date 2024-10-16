@@ -5,6 +5,7 @@ import {TextInput, TouchableOpacity, View} from 'react-native';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import {colors} from '../constants/colors';
 import {GlobalStyles} from '../styles/GlobalStyles';
+
 import Row from './Row';
 import TitleComponent from './TitleComponent';
 

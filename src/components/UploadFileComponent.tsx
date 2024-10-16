@@ -1,20 +1,21 @@
 /* eslint-disable react-native/no-inline-styles */
-import {View, Text, TouchableOpacity, Modal, Dimensions} from 'react-native';
-import React, {useEffect, useState} from 'react';
-import {Attachment} from '../models/TaskModel';
+import {Slider} from '@miblanchard/react-native-slider';
 import {DocumentCloud} from 'iconsax-react-native';
-import {colors} from '../constants/colors';
+import React, {useEffect, useState} from 'react';
+import {Dimensions, Modal, TouchableOpacity, View} from 'react-native';
 import DocumentPicker, {
   DocumentPickerResponse,
 } from 'react-native-document-picker';
-import TextComponent from './TextComponent';
+import {colors} from '../constants/colors';
+import {Attachment} from '../models/TaskModel';
 import {GlobalStyles} from '../styles/GlobalStyles';
-import TitleComponent from './TitleComponent';
-import Space from './Space';
 import {calcFileSize} from '../utils/calclFileSize';
-import {Slider} from '@miblanchard/react-native-slider';
-import Row from './Row';
+
+import Space from './Space';
+import TextComponent from './TextComponent';
+import TitleComponent from './TitleComponent';
 import storage from '@react-native-firebase/storage';
+import Row from './Row';
 
 interface Props {
   onUpload: (file: Attachment) => void;
@@ -22,6 +23,7 @@ interface Props {
 
 const UploadFileComponent = (props: Props) => {
   const {onUpload} = props;
+
   const [file, setFile] = useState<DocumentPickerResponse>();
   const [isVisible, setIsVisible] = useState(false);
   const [progressUpload, setProgressUpload] = useState(0);
@@ -35,6 +37,7 @@ const UploadFileComponent = (props: Props) => {
     if (!attachmentFile) {
       return;
     }
+
     onUpload(attachmentFile);
     setIsVisible(false);
     setProgressUpload(0);

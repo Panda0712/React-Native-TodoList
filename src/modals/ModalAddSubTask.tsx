@@ -1,14 +1,15 @@
 /* eslint-disable react-native/no-inline-styles */
+import firestore from '@react-native-firebase/firestore';
 import React, {useState} from 'react';
 import {Modal, TouchableOpacity, View} from 'react-native';
-import TextComponent from '../components/TextComponent';
-import {GlobalStyles} from '../styles/GlobalStyles';
-import Row from '../components/Row';
-import Button from '../components/Button';
 import {colors} from '../constants/colors';
-import TitleComponent from '../components/TitleComponent';
+import {GlobalStyles} from '../styles/GlobalStyles';
+
+import Button from '../components/Button';
 import Input from '../components/Input';
-import firestore from '@react-native-firebase/firestore';
+import Row from '../components/Row';
+import TextComponent from '../components/TextComponent';
+import TitleComponent from '../components/TitleComponent';
 
 interface Props {
   visible: boolean;

@@ -1,19 +1,13 @@
 /* eslint-disable react-native/no-inline-styles */
-import {
-  ScrollView,
-  StyleProp,
-  TouchableOpacity,
-  View,
-  ViewStyle,
-} from 'react-native';
-import React, {ReactNode} from 'react';
-import {GlobalStyles} from '../styles/GlobalStyles';
-import Row from './Row';
 import {useNavigation} from '@react-navigation/native';
 import {ArrowLeft2} from 'iconsax-react-native';
+import React, {ReactNode} from 'react';
+import {ScrollView, TouchableOpacity, View} from 'react-native';
 import {colors} from '../constants/colors';
-import TextComponent from './TextComponent';
 import {fontFamilies} from '../constants/fontFamiles';
+import {GlobalStyles} from '../styles/GlobalStyles';
+import Row from './Row';
+import TextComponent from './TextComponent';
 
 interface Props {
   title?: string;
